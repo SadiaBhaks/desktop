@@ -1,0 +1,38 @@
+1.#include <stdio.h>
+
+int main() {
+
+    double wavelength, theta, slit_separation;
+
+
+    printf("Enter the wavelength (nm): ");
+    scanf("%lf", &wavelength);
+
+
+    if (wavelength < 380 || wavelength > 750) {
+        printf("Out of range. Please enter a valid number for wavelength.\n");
+        return 1;
+    }
+
+    printf("Enter the angle (degrees): ");
+    scanf("%lf", &theta);
+
+    printf("Enter the slit separation (μm): ");
+    scanf("%lf", &slit_separation);
+
+
+    int order = (int)(slit_separation * (theta / wavelength) / 2 + 0.5);
+
+
+    printf("The order of maxima is: %d\n", order);
+
+    return 0;
+}
+
+2. Single slit diffraction
+Angle of diffraction θ=45°
+order of diffraction n=1(minimum)
+path length difference dsinθ=nλ(minimum)
+dsin45°=1*λ
+d/λ= √2
+=1.414
